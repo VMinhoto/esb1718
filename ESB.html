@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ESB</title>
+</head>
+
+<body>
+
+<div id="waveform"></div>
+
+<div style="text-align: center">
+  <button class="btn btn-primary" onclick="wavesurfer.playPause()">
+    <i class="glyphicon glyphicon-play"></i>
+    Play
+  </button>
+
+  <p class="row">
+    <div class="col-xs-1">
+      <i class="glyphicon glyphicon-zoom-in"></i>
+    </div>
+
+
+    <div class="col-xs-1">
+      <i class="glyphicon glyphicon-zoom-out"></i>
+    </div>
+  </p>
+</div>
+</body>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.5/wavesurfer.min.js"></script>
+<script>
+  var wavesurfer = WaveSurfer.create({
+  container: '#waveform',
+  waveColor: 'red',
+  progressColor: 'purple'
+});
+
+wavesurfer.load('hb2.m4a');
+
+
+</script>
+
+</html>
